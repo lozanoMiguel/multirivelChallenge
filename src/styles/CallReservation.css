@@ -1,0 +1,43 @@
+#call-reservation {
+	padding: 90px 0;
+	color: #fff;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8eb640+50,779936+100 */
+	background: #262626; /* Old browsers */
+	background: -moz-linear-gradient(#262626); /*FF3.6-15*/
+	background: -webkit-linear-gradient(#262626);/*  Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, (#262626)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb640', endColorstr='#779936', GradientType=0 ); /* IE6-9 */
+}
+
+#call-reservation p{
+  font-weight: bold;
+}
+
+#call-reservation .overlay {
+	padding: 80px 0;
+	background: #fff;
+}
+#call-reservation h2 {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-weight: 400;
+	margin: 0;
+}
+
+#call-reservation .numero-movil{
+	font-family: 'Open Sans', sans-serif;
+	color: whitesmoke;
+	font-weight: 800;
+	font-size:xx-large;
+	margin: 0;
+
+}
+#call-reservation hr {
+	background: #fff;
+}
+#call-reservation h3 {
+	color: #fff;
+	font-weight: 500;
+	font-size: 20px;
+	margin: 5px 0;
+}

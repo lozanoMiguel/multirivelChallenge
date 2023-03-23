@@ -1,0 +1,454 @@
+import React from 'react'
+import NavbarProject from './ProjectsPages/PageComponents/NavbarProject'
+import Porfolio from './ProjectsPages/PageComponents/Porfolio'
+import Footer from './Footer'
+
+export default function GalleryPage() {
+
+  const data = [
+
+    {
+      id:1,
+      imgSrc: "img/portfolio/V02/exterior/IMG_0365.avif"
+    },
+    {
+      id:2,
+      imgSrc: "img/portfolio/V02/exterior/IMG_0367.avif"
+    },
+    {
+      id:3,
+      imgSrc: "img/portfolio/V02/exterior/IMG_0373.avif"
+    },
+    {
+      id:4,
+      imgSrc: "img/portfolio/V02/exterior/IMG_0476.avif"
+    },
+    {
+      id:5,
+      imgSrc: "img/portfolio/V02/exterior/IMG_0479.avif"
+    },
+    {
+      id:6,
+      imgSrc: "img/portfolio/V02/exterior/IMG_0483.avif"
+    },
+    {
+      id:7,
+      imgSrc: "img/portfolio/V02/baños/IMG_0347.avif"
+    },
+    {
+      id:8,
+      imgSrc: "img/portfolio/V02/baños/IMG_0358.avif"
+    },
+    {
+      id:9,
+      imgSrc: "img/portfolio/V02/baños/IMG_0442.avif"
+    },
+    {
+      id:10,
+      imgSrc: "img/portfolio/V02/baños/IMG_0450.avif"
+    },
+    {
+      id:11,
+      imgSrc: "img/portfolio/V02/cocina/IMG_0342.avif",
+    },
+    {
+      id:12,
+      imgSrc: "img/portfolio/V02/interior/IMG_0310.avif"
+    },
+    {
+      id:13,
+      imgSrc: "img/portfolio/V02/interior/IMG_0310A.avif"
+    },
+    {
+      id:14,
+      imgSrc: "img/portfolio/V02/interior/IMG_0310AB.avif"
+    },
+    {
+      id:15,
+      imgSrc: "img/portfolio/V02/interior/IMG_0326.avif"
+    },
+    {
+      id:16,
+      imgSrc: "img/portfolio/V02/interior/IMG_0363.avif"
+    },
+    {
+      id:17,
+      imgSrc: "img/portfolio/V02/interior/IMG_0384.avif"
+    },
+    {
+      id:18,
+      imgSrc: "img/portfolio/V02/interior/IMG_0405.avif"
+    },
+    {
+      id:19,
+      imgSrc: "img/portfolio/V02/interior/IMG_0405A.avif"
+    },
+    {
+      id:20,
+      imgSrc: "img/portfolio/V02/interior/IMG_0424.avif"
+    },
+    {
+      id:21,
+      imgSrc: "img/portfolio/V02/interior/IMG_0431.avif"
+    },
+    {
+      id:22,
+      imgSrc: "img/portfolio/V02/interior/IMG_0434.avif"
+    },
+    {
+      id:23,
+      imgSrc: "img/portfolio/V02/interior/IMG_0462.avif"
+    },
+  // Agrega aquí todas las rutas de las imágenes que deseas mostrar
+];
+
+const data1 = [
+  {
+    id:1,
+    tag:"global",
+    imgSrc:"img/portfolio/V01/global/01-large-global.JPG"
+  },
+  {
+    id:2,
+    tag:"global",
+    imgSrc:"img/portfolio/V01/global/02-large-global.JPG"
+  },
+  {
+    id:3,
+    tag:"global",
+    imgSrc:"img/portfolio/V01/global/03-large-global.JPG"
+  },
+  {
+    id:4,
+    tag:"global",
+    imgSrc:"img/portfolio/V01/global/04-large-global.avif"
+  },
+  {
+    id:5,
+    tag:"global",
+    imgSrc:"img/portfolio/V01/global/05-large-global.JPG"
+  },
+  {
+    id:6,
+    tag:"global",
+    imgSrc:"img/portfolio/V01/global/06-large-global.JPG"
+  },
+  {
+    id:7,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V01/exterior/01-large-exterior.jpg"
+  },
+  {
+    id:8,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V01/exterior/02-large-exterior.jpg"
+  },
+  {
+    id:9,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V01/exterior/03-large-exterior.jpg"
+  },
+  {
+    id:10,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V01/exterior/04-large-exterior.jpg"
+  },
+  {
+    id:11,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V01/exterior/06-large-exterior.jpg"
+  },
+  {
+    id:12,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/01-large-interior.jpg"
+  },
+  {
+    id:13,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/02-large-interior.jpg"
+  },
+  {
+    id:14,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0782.jpg"
+  },
+  {
+    id:15,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0794.jpg"
+  },
+  {
+    id:16,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0798.jpg"
+  },
+  {
+    id:17,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0799.jpg"
+  },
+  {
+    id:18,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0800.jpg"
+  },
+  {
+    id:19,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0801.jpg"
+  },
+  {
+    id:20,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0803.jpg"
+  },
+  {
+    id:21,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0805.jpg"
+  },
+  {
+    id:22,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0809.jpg"
+  },
+  {
+    id:23,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0810.jpg"
+  },
+  {
+    id:24,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0811.jpg"
+  },
+  {
+    id:25,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0814.jpg"
+  },
+  {
+    id:26,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0817.jpg"
+  },
+  {
+    id:27,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0817.jpg"
+  },
+  {
+    id:28,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0819.jpg"
+  },
+  {
+    id:29,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0822.jpg"
+  },
+  {
+    id:30,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0825.jpg"
+  },
+  {
+    id:31,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0827.jpg"
+  },
+  {
+    id:32,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0830.jpg"
+  },
+  {
+    id:33,
+    tag:"interior",
+    imgSrc:"img/portfolio/V01/interior/IMG_0832.jpg"
+  },
+  {
+    id:34,
+    tag:"baños",
+    imgSrc:"img/portfolio/V01/baños/IMG_0785.jpg"
+  },
+  {
+    id:35,
+    tag:"baños",
+    imgSrc:"img/portfolio/V01/baños/IMG_0787.jpg"
+  },
+  {
+    id:36,
+    tag:"baños",
+    imgSrc:"img/portfolio/V01/baños/IMG_0788.jpg"
+  },
+  {
+    id:37,
+    tag:"baños",
+    imgSrc:"img/portfolio/V01/baños/IMG_0808.jpg"
+  },
+  {
+    id:38,
+    tag:"baños",
+    imgSrc:"img/portfolio/V01/baños/IMG_0816.jpg"
+  },
+  {
+    id:39,
+    tag:"cocina",
+    imgSrc:"img/portfolio/V01/cocina/IMG_0802.jpg"
+  },
+  {
+    id:40,
+    tag:"cocina",
+    imgSrc:"img/portfolio/V01/cocina/IMG_0824.jpg"
+  },
+  {
+    id:41,
+    tag:"cocina",
+    imgSrc:"img/portfolio/V01/cocina/IMG_0833.jpg"
+  },
+  {
+    id:42,
+    tag:"escaleras",
+    imgSrc:"img/portfolio/V01/escaleras/01-large-escaleras.jpg"
+  },
+  {
+    id:43,
+    tag:"parking",
+    imgSrc:"img/portfolio/V01/parking/01-large-parking.jpg"
+  },
+  {
+    id:44,
+    tag:"parking",
+    imgSrc:"img/portfolio/V01/parking/02-large-parking.jpg"
+  },
+  {
+    id:45,
+    tag:"pool",
+    imgSrc:"img/portfolio/V01/pool/01-large-pool.jpg"
+  },
+  {
+    id:46,
+    tag:"pool",
+    imgSrc:"img/portfolio/V01/pool/02-large-pool.jpg"
+  },
+  {
+    id:47,
+    tag:"pool",
+    imgSrc:"img/portfolio/V01/pool/03-large-pool.jpg"
+  },
+  {
+    id:48,
+    tag:"pool",
+    imgSrc:"img/portfolio/V01/pool/04-large-pool.jpg"
+  },
+  {
+    id:49,
+    tag:"pool",
+    imgSrc:"img/portfolio/V01/pool/05-large-pool.jpg"
+  },
+  {
+    id:50,
+    tag:"pool",
+    imgSrc:"img/portfolio/V01/pool/06-large-pool.jpg"
+  },
+  {
+    id:51,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/01-large-terraza.jpg"
+  },
+  {
+    id:52,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/02-large-terraza.jpg"
+  },
+  {
+    id:53,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/03-large-terraza.jpg"
+  },
+  {
+    id:54,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/04-large-terraza.jpg"
+  },
+  {
+    id:55,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/05-large-terraza.jpg"
+  },
+  {
+    id:56,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/06-large-terraza.jpg"
+  },
+  {
+    id:57,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/07-large-terraza.jpg"
+  },
+  {
+    id:58,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/08-large-terraza.jpg"
+  },
+  {
+    id:59,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/09-large-terraza.jpg"
+  },
+  {
+    id:60,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/10-large-terraza.jpg"
+  },
+  {
+    id:61,
+    tag:"terraza",
+    imgSrc:"img/portfolio/V01/terraza/10-large-terraza.jpg"
+  },
+  {
+    id:62,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V02/exterior/IMG_0365.avif"
+  },
+  {
+    id:63,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V02/exterior/IMG_0367.jpg"
+  },
+  {
+    id:64,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V02/exterior/IMG_0373.jpg"
+  },
+  {
+    id:65,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V02/exterior/IMG_0476.jpg"
+  },
+  {
+    id:66,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V02/exterior/IMG_0479.jpg"
+  },
+  {
+    id:67,
+    tag:"exterior",
+    imgSrc:"img/portfolio/V02/exterior/IMG_0483.jpg"
+  },
+];
+
+  return (
+    <div>
+      <NavbarProject />
+      <Porfolio 
+        data = { data1}
+        title ={ "Galeria" }
+        isGallery = {false}
+        />
+      <Footer />
+    </div>
+  )
+}

@@ -1,0 +1,79 @@
+#proyect-menu {
+	padding: 0 0 60px 0;
+}
+#proyect-menu .section-title {
+	background: #444 url(../img/menu-bg.avif) center center no-repeat fixed;
+	background-size: cover;
+}
+#proyect-menu .section-title h2 {
+	color: #fff;
+}
+
+#proyect-menu .section-title hr {
+	margin: 0 auto;
+	margin-bottom: 40px;
+    border: none;
+    opacity: 1;
+}
+
+#proyect-menu .section-title p {
+	font-size: 22px;
+	color: rgba(255,255,255,0.8);
+}
+
+#proyect-menu .section-title {
+	margin-bottom: 70px;
+}
+
+#proyect-menu .section-title hr {
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+#proyect-menu .section-title .overlay {
+	padding: 80px 0;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+/*#proyect-menu img {
+	width: 420px;
+}
+#proyect-menu h3 {
+	padding: 10px 0;
+	text-transform: uppercase;
+}
+#proyect-menu hr {
+	margin: 0 auto;
+}
+#proyect-menu .menu-section {
+	margin: 0 20px 80px;
+}
+#proyect-menu .menu-section-title {
+	font-size: 26px;
+	display: block;
+	font-weight: 500;
+	color: #444;
+	margin: 20px 0;
+	text-align: center;
+}
+#proyect-menu .menu-item {
+	margin: 35px 0;
+	font-size: 18px;
+}
+#proyect-menu .menu-item-name {
+	font-weight: 600;
+	font-size: 17px;
+	color: #555;
+	border-bottom: 2px dotted rgb(213, 213, 213);
+}
+#proyect-menu .menu-item-description {
+	font-style: italic;
+	font-size: 15px;
+}
+#proyect-menu .menu-item-price {
+	float: right;
+	font-weight: 600;
+	color: #555;
+	margin-top: -26px;
+}*/
+
