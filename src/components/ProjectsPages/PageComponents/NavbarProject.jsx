@@ -9,7 +9,7 @@ export default function NavbarProject() {
 
   const changeBackground = () => {
 
-    if (window.scrollY > 500)
+    if (window.scrollY > 250)
       setNavbar(true)
     else
       setNavbar(false)

@@ -7,10 +7,13 @@ export default function Porfolio( props ) {
 
   const [tag, setTag] = useState('exterior');
   
+  
+
+  //obtengo el nombre de la galeria que quiero mostrar
   const handleBtn = (btnInfo) =>{
     setTag(btnInfo);
   }
-
+  //obtengo el url de las imagenes que deseo motrar en base al tag que se selecciono
   const getData = () =>{
     let datos;
     if(!props.isGallery){
@@ -23,6 +26,8 @@ export default function Porfolio( props ) {
 
   let jsx = null;
 
+  //condicional para determinar que botones mostrar. Se diferencia entre la galeria en general o la galeria especifica de cada proyecto
+  //en la galeria, con el operador ternario pintamos de rojo segun el tag que se seleccione
   if(props.isGallery){
     jsx = <ol className="type">
             <li><a href="#" data-filter=".despues" className="active">Actualidad</a></li>
@@ -30,14 +35,14 @@ export default function Porfolio( props ) {
   }
   else{
     jsx = <ol className="type">
-            <li><a href="#" id="btn-gallery" className="active" data-filter=".exterior" onClick={()=>{handleBtn('exterior')}}>Exteriores</a></li>
-            <li><a href="#" id="btn-gallery" data-filter=".interior" onClick={()=>{handleBtn('interior')}}>Interiores</a></li>
+            <li><a href="#" id="btn-gallery" className={ tag === 'exterior' ? "active" : ""} data-filter=".exterior" onClick={()=>{handleBtn('exterior')}}>Exteriores</a></li>
+            <li><a href="#" id="btn-gallery" className={ tag === 'interior' ? "active" : ""} data-filter=".interior" onClick={()=>{handleBtn('interior')}}>Interiores</a></li>
             <br />
-            <li><a href="#" id="btn-gallery" data-filter=".cocinas" onClick={()=>{handleBtn('cocina')}}>Cocinas</a></li>
-            <li><a href="#" id="btn-gallery" data-filter=".baños" onClick={()=>{handleBtn('baños')}}>Baños</a></li>
+            <li><a href="#" id="btn-gallery" className={ tag === 'cocina' ? "active" : ""} data-filter=".cocinas" onClick={()=>{handleBtn('cocina')}}>Cocinas</a></li>
+            <li><a href="#" id="btn-gallery" className={ tag === 'baños' ? "active" : ""} data-filter=".baños" onClick={()=>{handleBtn('baños')}}>Baños</a></li>
             <br />
-            <li><a href="#" id="btn-gallery" data-filter=".escaleras" onClick={()=>{handleBtn('escaleras')}}>Escaleras</a></li>
-            <li><a href="#" id="btn-gallery" data-filter=".piscinas" onClick={()=>{handleBtn('pool')}}>Piscinas</a></li>
+            <li><a href="#" id="btn-gallery" className={ tag === 'escaleras' ? "active" : ""} data-filter=".escaleras" onClick={()=>{handleBtn('escaleras')}}>Escaleras</a></li>
+            <li><a href="#" id="btn-gallery" className={ tag === 'pool' ? "active" : ""} data-filter=".piscinas" onClick={()=>{handleBtn('pool')}}>Piscinas</a></li>
           </ol>
   }
 
