@@ -12,7 +12,9 @@ import Footer from './Footer.jsx';
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <Navbar 
+        isHome = {true}
+        />
       <Header />
       <About />
       <ProjectMenu />

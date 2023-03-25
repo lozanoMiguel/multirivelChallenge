@@ -15,7 +15,7 @@ export default function Project(props) {
             <div className="menu-item-name">{ props.location }</div>
             <div className="menu-item-description">{ props.description }</div>
             <br />
-            <div className="about-img"><img src={ props.img } className="img-responsive" alt={props.title} onClick={()=>{navigate(`${props.navigate}`)}}/></div>
+            <div className="about-img"><img src={ props.img } className="img-responsive" alt={props.title} onClick={()=>navigate(`/page`,{state: `${props.title}`} )}/></div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '../../../styles/Porfolio.css'
-import '../../../styles/Gallery.css'
+import '../../styles/Porfolio.css'
+import '../../styles/Gallery.css'
 import Modal from './Modal';
 
 export default function Gallery({gallery}) {
