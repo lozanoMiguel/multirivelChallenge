@@ -103,10 +103,7 @@ export default function VillaPalma() {
   // Agrega aquí todas las rutas de las imágenes que deseas mostrar
 ];
 
-console.log(imgUrl.villaPalma)
-console.log(data)
-
-  return (
+return (
     <div>
       <NavbarProject />
       <Porfolio 
