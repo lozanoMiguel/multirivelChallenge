@@ -2,9 +2,11 @@ import React from 'react'
 import '../styles/About.css';
 import imagen from '../img/MULTIRIVEL.jpg'
 
+
 export default function About() {
+
   return (
-    <div id="about">
+    <div id="about" >
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-md-6 d-flex justify-content-center">

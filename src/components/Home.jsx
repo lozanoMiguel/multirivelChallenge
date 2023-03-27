@@ -10,10 +10,18 @@ import Footer from './Footer.jsx';
 
 
 export default function Home() {
+
+  const div = document.getElementsByTagName("div");
+  console.log(div)
+  const observer = new IntersectionObserver(entries =>{
+    console.log(entries)
+  })
+  observer.observe(div[0])
+
   return (
     <div>
       <Navbar 
-        isHome = {true}
+          isHome = {true}
         />
       <Header />
       <About />

@@ -5,6 +5,8 @@ import Modal from './Modal';
 
 export default function Gallery({gallery}) {
 
+  
+  
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -17,6 +19,7 @@ export default function Gallery({gallery}) {
 
   //foto a la derecha
   const handleRotationRight = () =>{
+    
     const totalGallery = Object.keys(gallery).length;
     if(currentIndex +1 >= totalGallery){
       setCurrentIndex(0);
@@ -37,7 +40,8 @@ export default function Gallery({gallery}) {
   //foto a la izquierda
   const handleRotationLeft = () => {
     const totalGallery = Object.keys(gallery).length;
-    if (currentIndex === 0) {
+    console.log(currentIndex)
+    if ((currentIndex) === 0) {
       setCurrentIndex(totalGallery - 1);
       const newUrl = Object.entries(gallery)[totalGallery - 1][1].imgSrc;
       setClickedImg(newUrl);
@@ -48,6 +52,7 @@ export default function Gallery({gallery}) {
       return Object.entries(gallery)[item[0]][1].id === newIndex;
     })
     
+    console.log(newUrl)
     const newItem = `${newUrl[0][1].imgSrc}`;
     setClickedImg(newItem);
     setCurrentIndex(newIndex);

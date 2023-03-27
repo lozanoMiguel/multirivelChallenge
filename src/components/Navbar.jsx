@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 import { useNavigate } from "react-router-dom";
+import { useInView } from 'react-intersection-observer';
+
 
 export default function Navbar(props) {
 

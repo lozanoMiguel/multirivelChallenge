@@ -45,14 +45,12 @@ export default function ProjectMenu() {
             location={"Ubicación"}
             description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
             img={ cotoReal }
-            
+            navigate={"#"}
             />
-            
         </div>
       </div>
-        
     </div>
   )
 }
 
-//'d-flex flex-wrap justify-content-between'//
+

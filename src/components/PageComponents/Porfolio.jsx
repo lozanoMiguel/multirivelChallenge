@@ -7,14 +7,13 @@ export default function Porfolio( props ) {
 
   const [tag, setTag] = useState('exterior');
   
-  
-
   //obtengo el nombre de la galeria que quiero mostrar
   const handleBtn = (btnInfo) =>{
     setTag(btnInfo);
   }
   //obtengo el url de las imagenes que deseo motrar en base al tag que se selecciono
   const getData = () =>{
+    
     let datos;
     if(!props.isGallery){
       datos = props.data.filter(d => d.tag === tag);

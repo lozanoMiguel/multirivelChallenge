@@ -5,6 +5,8 @@ import Footer from './Footer'
 import imgUrl from '../imgUrl.json';
 
 export default function GalleryPage() {
+  
+console.log(imgUrl.gallery)
 
  return (
     <div>
