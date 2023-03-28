@@ -608,7 +608,7 @@
       },
       {
         "id":9,
-       " imgSrc":"img/portfolio/V01/exterior/04-large-exterior.jpg"
+        "imgSrc":"img/portfolio/V01/exterior/04-large-exterior.jpg"
       },
       {
         "id":10,
@@ -692,7 +692,7 @@
       },
       {
         "id":30,
-        "imgSrc":"../../img/portfolio/V01/interior/IMG_0803.jpg"
+        "imgSrc":"img/portfolio/V01/interior/IMG_0803.jpg"
       },
       {
         "id":31,
@@ -751,7 +751,7 @@
         "imgSrc":"img/portfolio/V01/parking/02-large-parking.jpg"
       },
       {
-       " id":45,
+        "id":45,
         "imgSrc":"img/portfolio/V01/pool/01-large-pool.jpg"
       },
       {

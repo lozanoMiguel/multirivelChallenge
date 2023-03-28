@@ -1,35 +1,34 @@
-import React from 'react'
-import Navbar from './Navbar.jsx';
-import Header from './Header.jsx';
-import About from './About.jsx';
-import ProjectMenu from './ProjectMenu.jsx';
-import Team from './Team.jsx';
-import CallReservation from './CallReservation.jsx';
-import Contact from './Contact.jsx';
-import Footer from './Footer.jsx';
+import React, { Suspense, useEffect} from 'react'
+const Navbar = React.lazy(() => import('./Navbar'))
+const Header = React.lazy(() => import('./Header'))
+const About = React.lazy(() => import('./About'))
+const ProjectMenu = React.lazy(() => import('./ProjectMenu'))
+const Team = React.lazy(() => import('./Team'))
+const CallReservation = React.lazy(() => import('./CallReservation'))
+const Contact = React.lazy(() => import('./Contact'))
+const Footer = React.lazy(() => import('./Footer'))
 
 
 export default function Home() {
 
-  const div = document.getElementsByTagName("div");
-  console.log(div)
-  const observer = new IntersectionObserver(entries =>{
-    console.log(entries)
-  })
-  observer.observe(div[0])
+ useEffect(() => {
+    window.scrollTo(0, 0)
+  },[])
 
   return (
-    <div>
-      <Navbar 
+    <div id="home" className='home'>
+      <Suspense>
+        <Navbar 
           isHome = {true}
         />
-      <Header />
-      <About />
-      <ProjectMenu />
-      <Team />
-      <CallReservation />
-      <Contact />
-      <Footer />
+        <Header />
+        <About/>
+        <ProjectMenu />
+        <Team />
+        <CallReservation />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   )
 }

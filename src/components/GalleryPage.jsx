@@ -1,24 +1,26 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Porfolio from './PageComponents/Porfolio'
-import Footer from './Footer'
-import imgUrl from '../imgUrl.json';
+import React, { Suspense } from 'react'
+import imgUrl from '../imgUrl.json'
+
+const Navbar = React.lazy(() => import('./Navbar'))
+const Porfolio = React.lazy(() => import('./PageComponents/Porfolio')) 
+const Footer = React.lazy(() => import('./Footer'))
+
 
 export default function GalleryPage() {
   
-console.log(imgUrl.gallery)
-
  return (
     <div>
-      <Navbar
-        isHome = {false}
-      />
-      <Porfolio 
-        data = { imgUrl.gallery }
-        title ={ "Galeria" }
-        isGallery = {false}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar
+          isHome = {false}
         />
-      <Footer />
+        <Porfolio 
+          data = { imgUrl.gallery }
+          title ={ "Galeria" }
+          isGallery = {false}
+          />
+        <Footer />
+      </Suspense>
     </div>
   )
 }

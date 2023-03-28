@@ -1,9 +1,11 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Porfolio from './PageComponents/Porfolio'
-import Footer from './Footer'
+import React, {useEffect, Suspense} from 'react'
 import imgUrl from '../imgUrl.json';
 import { useLocation } from 'react-router';
+
+const Navbar = React.lazy(() => import('./Navbar'))
+const Porfolio = React.lazy(() => import('./PageComponents/Porfolio')) 
+const Footer = React.lazy(() => import('./Footer'))
+
 
 export default function Page() {
 
@@ -21,17 +23,23 @@ export default function Page() {
     return Url;
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
-      <Navbar 
-        isHome = {false} 
-      />
-      <Porfolio 
-        data = { url() }
-        title = { location.state }
-        isGallery = {true}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar 
+          isHome = {false} 
         />
-      <Footer />
+        <Porfolio 
+          data = { url() }
+          title = { location.state }
+          isGallery = {true}
+          />
+        <Footer />
+      </Suspense>
     </div>
   )
 }

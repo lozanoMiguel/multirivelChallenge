@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import '../../styles/Porfolio.css'
 import Gallery from './Gallery'
 
-
 export default function Porfolio( props ) {
 
   const [tag, setTag] = useState('exterior');
@@ -13,8 +12,7 @@ export default function Porfolio( props ) {
   }
   //obtengo el url de las imagenes que deseo motrar en base al tag que se selecciono
   const getData = () =>{
-    
-    let datos;
+   let datos;
     if(!props.isGallery){
       datos = props.data.filter(d => d.tag === tag);
     }else{

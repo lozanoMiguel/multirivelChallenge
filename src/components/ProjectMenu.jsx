@@ -1,11 +1,11 @@
-import React from 'react'
+import React,{ Suspense } from 'react'
 import '../styles/ProjectMenu.css'
-import Project from './Project.jsx';
 import villaFlorence from '../img/portfolio/V01/global/04-large-global.avif';
 import villaPalma from '../img/portfolio/V02/exterior/IMG_0365.avif';
 import villaOlivia from '../img/portfolio/V03/HR Villa Olivia-003.avif';
 import cotoReal from '../img/portfolio/V04/OBRAS.avif';
 
+const Project = React.lazy(() => import('./Project'))
 
 export default function ProjectMenu() {
   return (
@@ -19,34 +19,46 @@ export default function ProjectMenu() {
       </div>
       <div className='container'>
         <div className='d-flex flex-wrap justify-content-center'>
-          <Project
-            title={"Villa Florence"}
-            location={"Ubicación"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
-            img={ villaFlorence }
-            navigate={"/villaflorence"}
+          <Suspense fallback={<div>Loading...</div>}>
+            <Project
+              title={"Villa Florence"}
+              location={"Ubicación"}
+              description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
+              img={ villaFlorence }
+              navigate={"/villaflorence"}
+              isDisabled={false}
+              />
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Project
+              title={"Villa Palma"}
+              location={"Ubicación"}
+              description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
+              img={ villaPalma }
+              navigate={"/villapalma"}
+              isDisabled={false}
             />
-          <Project
-            title={"Villa Palma"}
-            location={"Ubicación"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
-            img={ villaPalma }
-            navigate={"/villapalma"}
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Project
+              title={"Villa Olivia"}
+              location={"Ubicación"}
+              description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
+              img={ villaOlivia }
+              navigate={"/villaolivia"}
+              isDisabled={false}
             />
-          <Project
-            title={"Villa Olivia"}
-            location={"Ubicación"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
-            img={ villaOlivia }
-            navigate={"/villaolivia"}
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Project
+              title={"Coto Real"}
+              location={"Ubicación"}
+              description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
+              img={ cotoReal }
+              navigate={"#"}
+              isDisabled={true}
             />
-          <Project
-            title={"Coto Real"}
-            location={"Ubicación"}
-            description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis sed dapibus leo nec ornare diam."}
-            img={ cotoReal }
-            navigate={"#"}
-            />
+          </Suspense>
         </div>
       </div>
     </div>

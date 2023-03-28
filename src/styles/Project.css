@@ -4,6 +4,10 @@
 	cursor: pointer;
 }
 
+.isDisabled{
+	pointer-events: none;
+}
+
 #proyect-menu h3 {
 	padding: 10px 0;
 	text-transform: uppercase;

@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Children } from 'react';
 import '../styles/Navbar.css';
 import { useNavigate } from "react-router-dom";
-import { useInView } from 'react-intersection-observer';
-
 
 export default function Navbar(props) {
 
@@ -12,7 +10,7 @@ export default function Navbar(props) {
 
   let jsx = null;
   let heightNav = null;
-  
+
   if(props.isHome){
     heightNav = 500;
     jsx = <ul className='navbar-nav ms-auto'>
@@ -48,8 +46,10 @@ export default function Navbar(props) {
       setNavbar(false)
   }
 
-  window.addEventListener('scroll', changeBackground);
-  
+  useEffect(()=>{
+    window.addEventListener('scroll', changeBackground);
+  }, []) 
+
   return (
     <nav className= { navbar ? 'navbar navbar-default navbar-expand-md navbar fixed-top on' : 'navbar navbar-default navbar-expand-md navbar fixed-top' } id='menu'>
       <div className='container'>
