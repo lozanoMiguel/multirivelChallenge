@@ -1,8 +1,12 @@
 # multirivelChallenge
-El proyecto fue realizado con la librería de JavaScript: React. La versión: 18.2.0.
+El proyecto fue realizado con la biblioteca de JavaScript: React. La versión: 18.2.0.
 Los estilos son llevados a cabo con Bootstrap versión: 5.2.3 y Css puro con el cuál sobrescribí algunos estilos de etiquetas que no lograba posicionar como quería.
-Las funciones hechas con jQuery como la transicion del navbar a un color negro luego de scrollear en el eje "Y" la adapté a React utilizando el hook "useState", addEventListener y operador ternario. La galería de imagenes la llevé a cabo con el hook useState, props y funciones. Y así varias funciones adapté a React utilizando como base el hook useState.
+Las funciones hechas con jQuery como la transicion del navbar a un color negro luego de scrollear en el eje "Y" la adapté a React utilizando el hook "useState", addEventListener y operador ternario. La galería de imagenes la llevé a cabo con el hook useState, props y funciones. Y así, varias funciones adapté a React utilizando como base el hook useState.
 Creé los siguientes componentes: Navbar, Header, About, ProjectMenu, Project, Team, CallReservation, Contact y Footer. En ésta primer mención tambien agregar que hay un componente Home donde estan alojados los componentes anteriormente nombrados. Me parecio útil agregar este componente para que el enrutamiento de todo el sitio sea comandado por ReactRouter. Entonces desde el componente principal App.js tengo las rutas al home que es la página principal, a la galería de imagenes en el componente GalleryPage y a los diferentes proyectos desde el componente Page que, por props, obtiene la informacion necesaria para renderizar segun la Villa que corresponda.
  Las rutas de las imagenes utilizadas en las galerías decidí alojarlas en un archivo json y que cada componente acceda desde ahí
  En el componente ProjectMenu, donde están los proyectos de la empresa tiene los siguientes estilos de bootstrap: d-flex flex-wrap justify-content-center.
 Con estas 3 clases logro que cualquier proyecto nuevo que se agregue se centre en linea y se desplace hacia abajo según el dispositvo con el cual se visite el sitio, se posicionan a pares como se realizó en maquetación.
+ Me quedó pendiente la siguiente funcion: Cuando el usuario scrollea, según en la sección en donde se encuentre del viewport, Que el navbar se pinte de rojo segun el componente que corresponda. Entiendo que utilizando un IntersectionObserver se podría lograr, o alguna función utilizando window.scrollY
+ También creo que le faltaía optimización en cuanto a la carga de imagenes, ya que son muchas. Si bien utilicé lazyLoad para que la carga sea al momento que se van mostrando en el viewPort entiendo de que se puede optimizar aún mas.
+ 
+ Muchas gracias por la oportunidad, disfruté hacer la prueba y siento que gané más experiencia!
